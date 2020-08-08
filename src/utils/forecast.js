@@ -1,5 +1,4 @@
 var request = require('postman-request')
-var chalk = require('chalk')
 const geocode = require('./geocode')
 
 
@@ -12,7 +11,7 @@ const forecast = function({ latitude, longitude, location }, callback) {
         if (error) {
             callback('Unable to connect to weather service.', undefined)
         } else if (body.error) {
-            callback(chalk.red('Oops. Unable to find location.'), undefined)
+            callback('Oops. Unable to find location.', undefined)
         } else {
             callback(undefined, {
                 temperature: body.current.temperature,

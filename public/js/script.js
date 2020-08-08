@@ -13,7 +13,6 @@ weatherForm.addEventListener('submit', (e) => {
             }
     
             document.querySelector('#forecastDisplay').innerHTML = data.forecast         
-    
         })
     })
 })
